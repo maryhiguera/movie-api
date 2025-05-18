@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+actor = Actor.create(first_name: "Tom", last_name: "Cruise", known_for: "actions films")
+
+i = 0
+5.times do
+  actor = Actor.create(first_name: "Marilyn", last_name: "Monroe", known_for: "actress and beauty#{i}")
+  i += 1
+end
