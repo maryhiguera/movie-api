@@ -29,14 +29,9 @@ class ActorsController < ApplicationController
   render json: actor
   end
 
-  def destory
-    render json:
-  end
-
-
   def destroy
    actor = Actor.find(params[:id])
-   actor.destory
+   actor.destroy
    render json: "actor deleted"
   end
 end

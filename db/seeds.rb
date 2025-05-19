@@ -8,10 +8,10 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-actor = Actor.create(first_name: "Tom", last_name: "Cruise", known_for: "actions films")
+require "ffaker"
 
-i = 0
-5.times do
-  actor = Actor.create(first_name: "Marilyn", last_name: "Monroe", known_for: "actress and beauty#{i}")
-  i += 1
+3.times do
+  actor = Actor.create(first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Job.title)
 end
+
+puts "seeded 3 actors"
